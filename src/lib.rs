@@ -6,6 +6,10 @@ use std::collections::HashMap;
 use std::ffi::OsString;
 use rustyline::DefaultEditor;
 
+pub use clap;
+pub use rustyline;
+pub use shell_words;
+
 
 type HandleFn<'ctx, Ctx> =
     dyn Fn(&Command<'ctx, Ctx>, &ArgMatches, &mut Ctx) -> Result<()> + 'ctx;
